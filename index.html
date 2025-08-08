@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec" />
-    <title>Redirecting...</title>
     <script>
+      // 強制重新整理頁面（模擬 F5）
+      location.reload(true);
       // 清除 sessionStorage 和 localStorage
       sessionStorage.clear();
       localStorage.clear();
+      // 延遲跳轉，確保重新整理完成
+      setTimeout(function() {
+        window.location.href = "https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec";
+      }, 100);
     </script>
+    <title>Redirecting...</title>
   </head>
   <body>
     <p>如果沒有自動跳轉，請點擊 <a href="https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec">這裡</a>。</p>
