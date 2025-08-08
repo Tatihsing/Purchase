@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <title>跳轉中...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .loading {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
     <script>
-      // 清除 sessionStorage 和 localStorage
-      sessionStorage.clear();
-      localStorage.clear();
-      // 直接跳轉，避免瀏覽器記錄當前頁面
-      window.location.replace("https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec");
+        // 清除所有可能的快取
+        sessionStorage.clear();
+        localStorage.clear();
+        
+        // 顯示載中狀態
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.innerHTML = '<div class="loading">系統處理中，請稍候...</div>';
+            
+            // 延遲跳轉，確保頁面完全載入
+            setTimeout(function() {
+                window.location.href = "https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec";
+            }, 1000); // 延遲 1 秒
+        });
     </script>
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>如果沒有自動跳轉，請點擊 <a href="https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec">這裡</a>。</p>
-  </body>
+</head>
+<body>
+</body>
 </html>
