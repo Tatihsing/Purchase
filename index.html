@@ -3,15 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <script>
-      // 強制重新整理頁面（模擬 F5）
-      location.reload(true);
       // 清除 sessionStorage 和 localStorage
       sessionStorage.clear();
       localStorage.clear();
-      // 延遲跳轉，確保重新整理完成
-      setTimeout(function() {
-        window.location.href = "https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec";
-      }, 100);
+      // 直接跳轉，避免瀏覽器記錄當前頁面
+      window.location.replace("https://script.google.com/macros/s/AKfycbxH2gQlR-YQhYICG_LMfRJcdz7mG4gY4RqIHzSydktb_lJ3jyoJALuc3JQ3GOC3bEq0Vw/exec");
     </script>
     <title>Redirecting...</title>
   </head>
